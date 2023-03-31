@@ -24,7 +24,7 @@ export const AppReducer = (state, action) => {
                 state.expenses.map((expense)=>{
 
                     if(expense.name === action.payload.name) {
-                        expense.allocatedBoudget = expense.allocatedBoudget + action.payload.quantity;
+                        expense.allocatedBoudget = expense.allocatedBoudget - action.payload.quantity;
                     }
 
                     expense.allocatedBoudget = expense.allocatedBoudget < 0 ? 0 : expense.allocatedBoudget;
