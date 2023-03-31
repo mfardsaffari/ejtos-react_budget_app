@@ -18,7 +18,7 @@ const ItemSelected = (props) => {
             }, 0);
         
             const reminded = parseInt(Budget) - totalExpenses;
-            console.log(reminded);
+
             if(quantity <= reminded)
             {
                 const item = {
@@ -74,7 +74,7 @@ const ItemSelected = (props) => {
                     <option   option value="Reduce" name="Reduce">Reduce</option>
                   </select>  
                   <span className="eco" style={{ marginLeft: '2rem', marginRight: '8px'}}></span>
-
+                    <span>{Currency}</span>
                     <input
                         required='required'
                         type='number'
